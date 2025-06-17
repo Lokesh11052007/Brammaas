@@ -1,0 +1,246 @@
+body {
+  overflow-x: hidden;
+  background-color: #FFF3E2;
+}
+
+/* In App.css or TopBar.css */
+.bg-primary {
+  background-color: #000863 !important;
+}
+/* CSS for NavBar */
+.academics-dropdown .dropdown-toggle {
+  background-color: orange !important;
+  border-radius: 0;
+  padding: 8px 16px;
+  color: white !important;
+}
+/* .nav-img{
+  position: relative;
+  left: -50px;
+} */
+.nav-navbar{
+  position: relative;
+  z-index: 1;
+}
+
+.search-box{
+  margin-right: 10px;
+  position: relative;
+  /* left: -30px; */
+  z-index: 2;
+  
+}
+
+/* academics */
+
+.academics-wrapper {
+  background-color: #fef1e7;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  color: #0c0b5c;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  margin-left: 60px;
+}
+
+.academics-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.academic-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 370px;
+  gap: 10px;
+  padding: 20px;
+  transition: 0.3s;
+  
+}
+
+.academic-card:hover {
+  transform: translateY(-5px);
+}
+
+.academic-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.view-more-btn {
+  background-color: #fca311;
+  color: white;
+  border: none;
+  /* padding: 8px 16px; */
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  /* margin-top: 10px; */
+}
+
+.view-more-btn span {
+  margin-left: 5px;
+}
+.academic-card:nth-child(2) .academic-img,
+.academic-card:nth-child(3) .academic-img,
+.academic-card:nth-child(1) .academic-img {
+  height: 300px;
+}
+
+.school-footer {
+  background-color: #f28c00;
+  padding-bottom: 20px;
+  margin-bottom: -24px;
+  font-size: 18px;
+}
+.school-footer hr{
+  width: 30%;
+  height: 4px;
+  background-color: #fff;
+  margin: 0;
+  border: none;
+}
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 220px;
+  width: fit-content;
+}
+
+.logo-section {
+  max-width: 300px;
+}
+
+.school-logo {
+  width: 120px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  font-weight: bold;
+  color: #000C92;
+  /* border-bottom: 3px solid white; */
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+}
+
+.footer-section li {
+  margin: 3px 0;
+  
+}
+
+.footer-section p {
+  margin: 8px 0;
+}
+
+.social-icons {
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  color: white;
+}
+
+.subscribe-box input {
+  padding: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  flex: 1;
+}
+
+.subscribe-box input::placeholder {
+  color: white;
+}
+
+.subscribe-box button {
+  background-color: #000C92;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+
+.footer-bottom {
+  border-color: #fff;
+  font-size: 15px;
+
+}
+.footer-bottom p {
+  color: #000C92;
+  font-weight: 500;
+}
+.footer-bottom span{
+  font-weight: 700;
+}
+
+/* AllCourses */
+.bg-cream-90 {
+  background-color: rgba(255, 243, 226, 0.9);
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
+}
+
+.course-h4{
+  color:#000C92;
+  font-weight: 600;
+}
+
+.btn-courses{
+  background-color: #FF9500;
+  color: #fff;
+  position: relative;
+  left: 25%;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+.hover-scale {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+@media (min-width: 1400px) {
+  .custom-img0{
+  width: 400px;
+  object-fit: cover;
+ }
+.subscribe-box {
+  top: 130px;
+ }
+}
+
+/* RelatedCourses */
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.font-family{
+  font-family: "Poppins", sans-serif;
+}
