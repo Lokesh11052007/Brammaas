@@ -11,6 +11,8 @@ import img8 from "../../assets/school.jpg";
 import img9 from "../../assets/girl.png";
 import next from "../../assets/next.png";
 
+import { motion } from 'framer-motion';
+
 export default function AllCourses() {
   const academic = [
     {
@@ -62,6 +64,12 @@ export default function AllCourses() {
 
   return (
     <>
+     <motion.div
+      initial={{ opacity: 0, y: 50 }}    // start state
+      animate={{ opacity: 1, y: 0 }}     // end state
+      exit={{ opacity: 0, y: -50 }}      // when navigating away
+      transition={{ duration: 0.4 }}
+    >
       <Header />
 
       <div className="container-fluid py-5 bg-cream-90">
@@ -90,6 +98,7 @@ export default function AllCourses() {
     </div>
 
       <Footer />
+      </motion.div>
     </>
   );
 }

@@ -6,16 +6,24 @@ import AcademicsPage from './components/academic/AcademicsPage.jsx'
 import AllCourses from './components/academic2/AllCourses.jsx';
 import AcademicsPage3 from './components/academic3/AcademicPage3.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import ScrollToTop from './ScrollToTop.jsx';
+import { AnimatePresence } from 'framer-motion';
 function App() {
   return (
+    <>
+    
     <Router>
+      <AnimatePresence mode="wait">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<AcademicsPage />} />
         <Route path="/AllCourses" element={<AllCourses />} />
         <Route path="/academic_page_3" element={<AcademicsPage3/> } />
       </Routes>
+      </AnimatePresence>
     </Router>
+    </>
+    
   );
 }
 
