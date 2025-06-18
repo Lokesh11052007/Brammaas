@@ -24,7 +24,7 @@ function AcademicsPage() {
             </div>
           </div>
           <div className="col-lg-7 col-md-12">
-            <div className="d-flex flex-column text-black" style={{fontSize: '16px', fontWeight: '500'}}>
+            <div className="d-flex flex-column text-black" style={{fontSize: '15px', fontWeight: '500'}}>
               <div className="align-self-start" style={{fontSize: '20px'}}>
                 Counselling
               </div>
