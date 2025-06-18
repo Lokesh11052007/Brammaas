@@ -17,7 +17,7 @@ export default function NavBar() {
         <Navbar.Collapse id="navbar-content">
           <Nav className="mx-auto fw-bold">
             <Nav.Link as={Link} to={"/academic_page_3"}>HOME</Nav.Link>
-            <Nav.Link as={Link} to="/AllCourses">ADMISSION</Nav.Link>
+            <Nav.Link as={Link} to={"/AllCourses"}>ADMISSION</Nav.Link>
             <NavDropdown title="ACADEMICS">
               <NavDropdown.Item href="#">Curriculum</NavDropdown.Item>
               <NavDropdown.Item href="#">Subjects</NavDropdown.Item>
@@ -26,7 +26,7 @@ export default function NavBar() {
             <Nav.Link href="#">TOPPERS</Nav.Link>
             <Nav.Link href="#">GALLERY</Nav.Link>
             <Nav.Link href="#">INFRASTRUCTURE</Nav.Link>
-            <Nav.Link href="#">ABOUT US</Nav.Link>
+            <Nav.Link as={Link} to={"/AboutUs"}>ABOUT US</Nav.Link>
             <Nav.Link href="#">CONTACT US</Nav.Link>
           </Nav>
           <div className="d-none d-lg-block">

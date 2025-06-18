@@ -5,6 +5,7 @@ import Header from "../header";
 import Footer from "../Footer";
 import RelatedCourse from "../academic/RelatedCourse";
 
+
 const DigitalClassroom = () => {
   return (
     <>
@@ -19,7 +20,7 @@ const DigitalClassroom = () => {
               <img
                 src={classroomImage}
                 className="img-fluid mt-3 rounded-3"
-                style={{aspectRatio: '1.13'}}
+                style={{aspectRatio:1.13}}
                 alt="DigitalClassroom"
               />
             </div>
