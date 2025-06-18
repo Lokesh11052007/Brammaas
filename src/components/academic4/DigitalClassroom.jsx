@@ -1,15 +1,13 @@
 import React from "react";
 import classroomImage from "../../assets/digital-classroom.jpg"; // replace with your actual image path
 
-import Header from "../header";
-import Footer from "../Footer";
 import RelatedCourse from "../academic/RelatedCourse";
 
 
 const DigitalClassroom = () => {
   return (
     <>
-        <Header />
+        
         <div className="px-5 py-5 w-100" style={{backgroundColor: '#FFF3E2'}}>
         <div className="row g-4">
           <div className="col-lg-5 col-md-12">
@@ -70,7 +68,6 @@ const DigitalClassroom = () => {
         </div>
       </div>
         <RelatedCourse />
-        <Footer />
     </>
   );
 };

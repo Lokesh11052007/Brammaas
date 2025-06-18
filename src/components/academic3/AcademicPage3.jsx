@@ -1,13 +1,11 @@
 
-import Header from '../header.jsx'
-import Footer from '../Footer.jsx';
 import RelatedCourse from '../academic/RelatedCourse.jsx'
 import imgSir from '../../assets/sir.jpg'
 
 function AcademicsPage3() {
   return (
     <>
-      <Header />
+      
      <div className="px-5 py-5 w-100" style={{backgroundColor: '#FFF3E2E5'}}>
         <div className="row g-4">
           <div className="col-lg-5 col-md-12">
@@ -64,7 +62,7 @@ function AcademicsPage3() {
         </div>
       </div>
       <RelatedCourse  />
-      <Footer />
+     
     </>
   );
 }

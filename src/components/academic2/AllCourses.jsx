@@ -1,5 +1,4 @@
-import Header from "../header";
-import Footer from "../Footer";
+
 import img1 from "../../assets/online.jpg";
 import img2 from "../../assets/child.jpg";
 import img3 from "../../assets/robot.jpg";
@@ -70,7 +69,6 @@ export default function AllCourses() {
       exit={{ opacity: 0, y: -50 }}      // when navigating away
       transition={{ duration: 0.4 }}
     >
-      <Header />
 
       <div className="container-fluid py-5 bg-cream-90">
       <div className="container">
@@ -97,7 +95,7 @@ export default function AllCourses() {
       </div>
     </div>
 
-      <Footer />
+      
       </motion.div>
     </>
   );

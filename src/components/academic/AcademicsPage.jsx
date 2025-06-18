@@ -1,11 +1,10 @@
 import React from 'react';
-import Header from '../header.jsx'
-import Footer from '../Footer.jsx';
+
 import RelatedCourse from './RelatedCourse.jsx'
 function AcademicsPage() {
   return (
     <div className="overflow-hidden bg-white">
-        <Header />
+        
 
       {/* Main Content Section */}
       <div className="px-5 py-5 w-100" style={{backgroundColor: '#FFF3E2'}}>
@@ -61,7 +60,7 @@ function AcademicsPage() {
       </div>
 
       <RelatedCourse />
-      <Footer />.
+     
     </div>
   );
 }

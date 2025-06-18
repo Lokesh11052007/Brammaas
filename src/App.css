@@ -1,3 +1,4 @@
+
 body {
   overflow-x: hidden;
 }
@@ -242,4 +243,24 @@ body {
 
 .font-family{
   font-family: "Poppins", sans-serif;
+}
+
+
+/* AboutUs */
+.breadcrumb-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #f59e0b  !important; /* Orange shade */
+  text-decoration: none;
+}
+
+.poltawski-nowy {
+  font-family: "Poltawski Nowy", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
