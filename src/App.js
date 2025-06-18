@@ -5,6 +5,7 @@ import './App.css'
 import AcademicsPage from './components/academic/AcademicsPage.jsx'
 import AllCourses from './components/academic2/AllCourses.jsx';
 import AcademicsPage3 from './components/academic3/AcademicPage3.jsx';
+import DigitalClassroom from './components/academic4/DigitalClassroom.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop.jsx';
 import { AnimatePresence } from 'framer-motion';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<AcademicsPage />} />
         <Route path="/AllCourses" element={<AllCourses />} />
         <Route path="/academic_page_3" element={<AcademicsPage3/> } />
+        <Route path="DigitalClassroom" element={<DigitalClassroom />} />
       </Routes>
       </AnimatePresence>
     </Router>
