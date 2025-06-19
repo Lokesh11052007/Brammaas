@@ -1,6 +1,9 @@
+import SportIcons from '../../assets/sportsIcon.png'
+
 import React from 'react';
 import { FeaturesHeader } from './FeaturesHeader';
 import { FeatureItem } from './FeatureItem';
+
 
 export function FeaturesSection() {
   const leftColumnFeatures = [
@@ -38,7 +41,7 @@ export function FeaturesSection() {
     {
       title: 'Activities',
       description: 'Brammass is a creative skill and a joy beyond anything found dolor.',
-      iconSrc: null,
+      iconSrc: SportIcons,
       iconBgColor: '#f59e0b',
       titleColor: 'text-info',
     },
@@ -100,7 +103,10 @@ export function FeaturesSection() {
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ba48b900aaeaf0506a33fcaf297b4400147b2a5?placeholderIfAbsent=true&apiKey=e21b74e9a59543a1829d05a9e69daf64"
           className="img-fluid w-100 shadow-sm"
           alt="logo"
-          style={{marginTop:"-5px", marginBottom: "-10px"}}
+          style={{
+            marginTop:"-5px",
+            marginBottom: "-10px"
+          }}
         />
       </div>
     </section>

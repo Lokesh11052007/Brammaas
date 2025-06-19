@@ -14,13 +14,15 @@ export function FeatureItem({
   const isIconRight = iconPosition === 'right';
 
   const textContent = (
-    <div className={`d-flex flex-column ${isRightAligned ? 'align-items-end' : ''}`}>
+    <div
+      className={`d-flex flex-column ${
+        isRightAligned ? 'align-items-md-end' : 'align-items-md-start'
+      } align-items-center text-center text-md-${isRightAligned ? 'end' : 'start'}`}
+    >
       <h3 className={`fs-3 fw-semibold poltawski-nowy ${titleColor}`}>
         {title}
       </h3>
-      <p className={`mt-2 text-dark fs-6 ${isRightAligned ? 'text-end' : ''}`}>
-        {description}
-      </p>
+      <p className="mt-2 text-dark fs-6">{description}</p>
     </div>
   );
 
@@ -33,15 +35,15 @@ export function FeatureItem({
   );
 
   return (
-    <article className="d-flex flex-column flex-md-row gap-3">
+    <article className="d-flex flex-column flex-md-row gap-3 align-items-center text-center text-md-start">
       {isIconRight ? (
         <>
           <div className="flex-grow-1">{textContent}</div>
-          <div>{iconContent}</div>
+          <div className="text-center text-md-end">{iconContent}</div>
         </>
       ) : (
         <>
-          <div>{iconContent}</div>
+          <div className="text-center text-md-start">{iconContent}</div>
           <div className="flex-grow-1">{textContent}</div>
         </>
       )}

@@ -18,7 +18,7 @@ const AcademicsPage = lazy(() => import('./components/academic/AcademicsPage.jsx
 const AllCourses = lazy(() => import('./components/academic2/AllCourses.jsx'));
 const AcademicsPage3 = lazy(() => import('./components/academic3/AcademicPage3.jsx'));
 const DigitalClassroom = lazy(() => import('./components/academic4/DigitalClassroom.jsx'));
-const AboutHeader = lazy(() => import('./components/aboutUs/AboutHeader.jsx'));
+const AboutUs = lazy(() => import('./components/aboutUs/AboutUs.jsx'));
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
             <Route path="/AllCourses" element={<AllCourses />} />
             <Route path="/academic_page_3" element={<AcademicsPage3 />} />
             <Route path="/DigitalClassroom" element={<DigitalClassroom />} />
-            <Route path="/AboutUs" element={<AboutHeader />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
           </Routes>
         </Suspense>
       </AnimatePresence>
