@@ -38,5 +38,6 @@ export default function AboutContent() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
+
