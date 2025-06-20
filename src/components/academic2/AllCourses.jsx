@@ -15,52 +15,63 @@ import { motion } from 'framer-motion';
 export default function AllCourses() {
   const navigate = useNavigate();
   const link = "/";
+  const link1 = "/DigitalClassroom";
+  const link3 = "/academic_page_3"
 
   const academic = [
     {
       title: "Brammaas IAS Academy",
       description: "Brammaas IAS Academy ( Unit of Brammaas Group of Schools) has been",
-      images: img1
+      images: img1,
+      add : link,
     },
     {
       title: "KG's",
       description: "Brammaas Group of Schools offers Quality and Holistic education in the",
-      images: img2
+      images: img2,
+      add : link,
     },
     {
       title: "Primary World of Tech For",
       description: "Brammaas offers smart and exceptional quality education aiming to nurture",
-      images: img3
+      images: img3,
+      add : link,
     },
     {
       title: "Secondary & Senior Secondary",
       description: "Brammaas IAS Academy ( Unit of Brammaas Group of Schools) has been",
-      images: img4
+      images: img4,
+      add : link,
     },
     {
       title: "Partnering with Parents",
       description: "Brammaas Group of Schools offers Quality and Holistic education in the",
-      images: img5
+      images: img5,
+      add : link,
     },
     {
       title: "Brammaas Programme",
       description: "Brammaas offers smart and exceptional quality education aiming to nurture",
-      images: img6
+      images: img6,
+      add : link3,
     },
     {
       title: "Digital Classroom",
       description: "Brammaas IAS Academy ( Unit of Brammaas Group of Schools) has been",
-      images: img7
+      images: img7,
+      add : link1,
     },
     {
       title: "Brammaas LEAD",
       description: "Brammaas Group of Schools offers Quality and Holistic education in the",
-      images: img8
+      images: img8,
+      add : link,
     },
     {
       title: "Counselling",
       description: "Brammaas offers smart and exceptional quality education aiming to nurture",
-      images: img9
+      images: img9,
+      add : link,
     }
   ];
 
@@ -89,7 +100,7 @@ export default function AllCourses() {
                 <h5>{item.title}</h5>
                 <p className="mt-4">{item.description}</p>
                 <button className="btn btn-courses w-30" 
-                onClick={()=>navigate(link)}>
+                onClick={()=>navigate(item.add)}>
                   View More <img src={next} alt="next" width="20" className="ms-2" />
                 </button>
               </div>

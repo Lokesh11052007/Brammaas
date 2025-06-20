@@ -16,10 +16,10 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="navbar-content" />
         <Navbar.Collapse id="navbar-content">
           <Nav className="mx-auto fw-bold">
-            <Nav.Link as={Link} to={"/academic_page_3"}>HOME</Nav.Link>
+            <Nav.Link as={Link} to={"https://brammaas-keaf.onrender.com/"}>HOME</Nav.Link>
             <Nav.Link as={Link} to={"/AllCourses"}>ADMISSION</Nav.Link>
-            <NavDropdown title="ACADEMICS">
-              <NavDropdown.Item href="#">Curriculum</NavDropdown.Item>
+            <NavDropdown title="ACADEMICS" as={Link} to={"/"}>
+              <NavDropdown.Item href="#" as={Link} to={"/"}>Curriculum</NavDropdown.Item>
               <NavDropdown.Item href="#">Subjects</NavDropdown.Item>
               <NavDropdown.Item href="#">Time Table</NavDropdown.Item>
             </NavDropdown>
