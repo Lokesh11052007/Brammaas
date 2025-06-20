@@ -9,10 +9,13 @@ import img7 from "../../assets/madam.jpg";
 import img8 from "../../assets/school.jpg";
 import img9 from "../../assets/girl.png";
 import next from "../../assets/next.png";
-
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function AllCourses() {
+  const navigate = useNavigate();
+  const link = "/";
+
   const academic = [
     {
       title: "Brammaas IAS Academy",
@@ -85,7 +88,8 @@ export default function AllCourses() {
                 />
                 <h5>{item.title}</h5>
                 <p className="mt-4">{item.description}</p>
-                <button className="btn btn-courses w-30">
+                <button className="btn btn-courses w-30" 
+                onClick={()=>navigate(link)}>
                   View More <img src={next} alt="next" width="20" className="ms-2" />
                 </button>
               </div>
