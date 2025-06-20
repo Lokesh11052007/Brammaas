@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
-import visionIcon from '../../assets/vision.png';
-import missionIcon from '../../assets/mission.png';
+import visionIcon from '../../../assets/vision.png';
+import missionIcon from '../../../assets/mission.png';
 
 function VisionCard() {
   const Vision = [

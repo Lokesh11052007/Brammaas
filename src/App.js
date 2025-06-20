@@ -10,8 +10,8 @@ import './App.css';
 
 import ScrollToTop from './ScrollToTop';
 import LogoLoader from './components/LogoLoader.jsx'; // ✅ import the logo loader
-import Header from './components/header.jsx';
-import Footer from './components/Footer.jsx';
+import Header from './components/header/Header.jsx';
+import Footer from './components/footer/Footer.jsx';
 
 
 // ✅ Lazy-load your pages

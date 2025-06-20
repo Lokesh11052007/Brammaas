@@ -1,6 +1,4 @@
-import SportIcons from '../../assets/sportsIcon.png'
-
-import React from 'react';
+import SportIcons from '../../../assets/sportsIcon.png'
 import { FeaturesHeader } from './FeaturesHeader';
 import { FeatureItem } from './FeatureItem';
 

@@ -3,8 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
-import SearchButton from './SearchBox/SearchBox';
-import logo from '../assets/footerLogo.jpg';
+import SearchButton from '../SearchBox/SearchBox';
+import logo from '../../assets/footerLogo.jpg';
 
 export default function NavBar() {
   return (

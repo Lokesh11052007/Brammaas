@@ -1,7 +1,7 @@
 import React from "react";
-import bgImage from "../../assets/aboutUsBottom.png"; // replace with your image path
-import search from '../../assets/search.png'
-import what from '../../assets/what.png'
+import bgImage from "../../../assets/aboutUsBottom.png"; // replace with your image path
+import search from '../../../assets/search.png'
+import what from '../../../assets/what.png'
 export default function BackgroundSection() {
   const section = [
     {

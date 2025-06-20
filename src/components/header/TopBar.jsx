@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaEnvelope, FaPhone } from 'react-icons/fa';
-import '../App.css';
+import '../../App.css';
 
 function TopBar() {
   return (

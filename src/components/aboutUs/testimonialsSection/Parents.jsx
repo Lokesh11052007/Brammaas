@@ -1,22 +1,22 @@
-import { Carousel, Col, Row } from "react-bootstrap";
-import ParentTestimonial from '../../assets/PARENTS TESTIMONIALS.jpg'
+
+import ParentTestimonial from '../../../assets/PARENTS TESTIMONIALS.jpg'
 
 export default function Parent() {
     const parents = [
         {
-            img: require('../../assets/parent1.jpg'),
+            img: require('../../../assets/parent1.jpg'),
             Name: "K. Rajesh Kumar",
             description1: "I’m Surya parents , We love Brammaas School because it provides the basic foundation to prepare our child surya for the challenges of the real world .",
             description2:"Lorem ipsum dolor sit abet,advising edit, vivas nibs dolor gravid at eleven",
         },
         {
-            img: require('../../assets/parent2.jpg'),
+            img: require('../../../assets/parent2.jpg'),
             Name: "Nivin paul isaac",
             description1: "I’m Surya parents , We love Brammaas School because it provides the basic foundation to prepare our child surya for the challenges of the real world .",
             description2:"Lorem ipsum dolor sit abet,advising edit, vivas nibs dolor gravid at eleven",
         },
         {
-            img: require('../../assets/parent3.jpg'),
+            img: require('../../../assets/parent3.jpg'),
             Name: "Janani iyer nivetha",
             description1: "I’m Surya parents , We love Brammaas School because it provides the basic foundation to prepare our child surya for the challenges of the real world .",
             description2:"Lorem ipsum dolor sit abet,advising edit, vivas nibs dolor gravid at eleven",

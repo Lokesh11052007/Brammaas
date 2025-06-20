@@ -1,4 +1,4 @@
-import logo from '../assets/footerLogo.jpg';
+import logo from '../../assets/footerLogo.jpg';
 import { FaPhone, FaEnvelope, FaQuestion } from 'react-icons/fa';
 import {
   FaFacebook,
@@ -12,7 +12,7 @@ import { TbWorldQuestion } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <footer className="school-footer px-4 py-4 ">
+    <footer className="school-footer  px-4 py-4 ">
       {/* Main Footer Section */}
       <div className="container">
         <div className="row gy-4">
