@@ -1,6 +1,7 @@
 // NavBar.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { NavLink } from 'react-router-dom';
 
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import SearchButton from '../SearchBox/SearchBox';
@@ -16,19 +17,19 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="navbar-content" />
         <Navbar.Collapse id="navbar-content">
           <Nav className="mx-auto fw-bold">
-            <Nav.Link as={Link} to={"/"}>HOME</Nav.Link>
-            <Nav.Link as={Link} to={"/admission"}>ADMISSION</Nav.Link>
+            <Nav.Link as={NavLink} to={"/"} end>HOME</Nav.Link>
+            <Nav.Link as={NavLink} to={"/admission"}>ADMISSION</Nav.Link>
             <NavDropdown title="ACADEMICS">
-              <NavDropdown.Item as={Link} to={"/counselling"}>Counselling</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to={"/brammaasPrograme"}>Brammaas Programe</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to={"/DigitalClassroom"}>Digital Classroom</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to={"/AllCourses"}>All Academics</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to={"/counselling"}>Counselling</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to={"/brammaasPrograme"}>Brammaas Programe</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to={"/DigitalClassroom"}>Digital Classroom</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to={"/AllCourses"}>All Academics</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to={'/topper'}>TOPPERS</Nav.Link>
-            <Nav.Link as={Link} to={"/gallery"}>GALLERY</Nav.Link>
-            <Nav.Link  as={Link} to={"/infrastructure"}>INFRASTRUCTURE</Nav.Link>
-            <Nav.Link as={Link} to={"/AboutUs"}>ABOUT US</Nav.Link>
-            <Nav.Link as={Link} to={"/contactUs"}>CONTACT US</Nav.Link>
+            <Nav.Link as={NavLink} to={'/topper'}>TOPPERS</Nav.Link>
+            <Nav.Link as={NavLink} to={"/gallery"}>GALLERY</Nav.Link>
+            <Nav.Link  as={NavLink} to={"/infrastructure"}>INFRASTRUCTURE</Nav.Link>
+            <Nav.Link as={NavLink} to={"/AboutUs"}>ABOUT US</Nav.Link>
+            <Nav.Link as={NavLink} to={"/contactUs"}>CONTACT US</Nav.Link>
           </Nav>
           <div className="d-none d-lg-block">
             <SearchButton />

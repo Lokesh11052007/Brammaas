@@ -26,18 +26,19 @@ const HeroSection = () => {
       </div>
 
       {/* Bottom Strip / Marquee */}
-      <div className="position-absolute bottom-0 w-100 bg-warning text-dark py-2 px-3">
-        <div className="container-fluid">
-          <div className="row text-center text-md-start">
-            <div className="col-12 col-md-6 fw-bold mb-2 mb-md-0">
-              Admissions Open 2025 - 2026 | Contact us Today
-            </div>
-            <div className="col-12 col-md-6 fw-bold text-md-end">
-              Merit Scholarship Assessment Test For 2025–2026 – Duration 1hr
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="position-absolute bottom-0 w-100 bg-warning text-dark py-2 px-3 overflow-hidden">
+  <div className="scroll-container">
+    <div className="scroll-text">
+      Admissions Open 2025 - 2026 | Contact us Today &nbsp;&nbsp;&nbsp;&nbsp;
+      Merit Scholarship Assessment Test For 2025–2026 – Duration 1hr &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+
+
     </div>
   );
 };

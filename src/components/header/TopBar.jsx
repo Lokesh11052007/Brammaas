@@ -12,24 +12,31 @@ function TopBar() {
           {/* Left: Email and Phone */}
           <div className="col-12 col-md d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mb-2 mb-md-0">
             <div className="d-flex align-items-center">
-              <FaEnvelope className="me-2" />
-              <span>principle@bramaasschool.com</span>
+              <a href="mailto:principle@brammasschool.com" className="text-decoration-none text-white">
+                <FaEnvelope className="me-2" />
+                <span>principle@brammasschool.com</span>
+              </a>
+
             </div>
             <div className="vr d-none d-md-block" />
             <div className="d-flex align-items-center">
-              <FaPhone className="me-2" style={{ transform: 'rotate(90deg)' }}/>
-              <span>+95667 95556 / +95667 955566</span>
+              <a href="tel:+9566795556" className="text-decoration-none text-white">
+                <FaPhone className="me-2" style={{ transform: 'rotate(90deg)' }} />
+                <span>+91 95667 95556</span> </a>&nbsp;  / &nbsp;
+              <a href="tel:+9195667955566" className="text-decoration-none text-white"> 
+                <span> +91 95667 955566</span>
+              </a>
             </div>
           </div>
 
           {/* Right: Social icons and payment */}
           <div className="col-12 col-md-auto d-flex justify-content-center justify-content-md-end align-items-center gap-3 flex-wrap">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaTwitter />
-            <FaYoutube />
-            <FaEnvelope />
-            <FaPhone style={{ transform: 'rotate(90deg)' }}/>
+            <a href="https://www.facebook.com/BRAMMAASVIDHYALAYACBSESCHOOL" className="text-decoration-none text-white"><FaFacebookF /></a>
+            <a href="#h" className='text-decoration-none text-white'><FaInstagram /></a>
+            <a href="#f" className='text-decoration-none text-white'><FaTwitter /></a>
+            <a href="https://youtube.com/@brammaasvidhyalayaseniorse7601?si=RbkrgW2SUTwCHIz7" className='text-decoration-none text-white'><FaYoutube /></a>
+            <a href="mailto:principle@brammasschool.com" className='text-decoration-none text-white'><FaEnvelope /> </a>
+            <a href="tel:+9566795556" className='text-decoration-none text-white'><FaPhone style={{ transform: 'rotate(90deg)' }}/> </a>
             <span className="border-start ps-3 ms-2">Online Payment</span>
           </div>
 
