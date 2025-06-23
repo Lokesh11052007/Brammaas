@@ -15,12 +15,19 @@ import Footer from './components/footer/Footer.jsx';
 
 
 // ✅ Lazy-load your pages
-const AcademicsPage = lazy(() => import('./components/academic/AcademicsPage.jsx'));
-const AllCourses = lazy(() => import('./components/academic2/AllCourses.jsx'));
-const AcademicsPage3 = lazy(() => import('./components/academic3/AcademicPage3.jsx'));
-const DigitalClassroom = lazy(() => import('./components/academic4/DigitalClassroom.jsx'));
+const AcademicsPage = lazy(() => import('./components/academic/academic1/AcademicsPage.jsx'));
+const AllCourses = lazy(() => import('./components/academic/academic2/AllCourses.jsx'));
+const AcademicsPage3 = lazy(() => import('./components/academic/academic3/AcademicPage3.jsx'));
+const DigitalClassroom = lazy(() => import('./components/academic/academic4/DigitalClassroom.jsx'));
 const AboutUs = lazy(() => import('./components/aboutUs/AboutUs.jsx'));
 
+const Home = lazy( () => import('./components/home/Home.jsx')); 
+const Infrastructure = lazy(() => import('./components/infrastructure/Infrastructure.jsx'))
+const Toppers = lazy(() => import('./components/toppers/Toppers.jsx'))
+const Contact = lazy(() => import('./components/contactUs/Contactus.jsx'))
+const Gallery = lazy(() => import('./components/gallery/Gallery.jsx'))
+const Annual = lazy(() => import('./components/gallery/Annual.jsx'))
+const Admission = lazy(() => import('./components/admission/Admission.jsx'))
 function App() {
   return (
     <Router>
@@ -30,11 +37,19 @@ function App() {
         {/* ✅ Suspense fallback shows logo while lazy routes are loading */}
         <Suspense fallback={<LogoLoader />}>
           <Routes>
-            <Route path="/" element={<AcademicsPage />} />
+            <Route path="/counselling" element={<AcademicsPage />} />
             <Route path="/AllCourses" element={<AllCourses />} />
-            <Route path="/academic_page_3" element={<AcademicsPage3 />} />
+            <Route path="/brammaasPrograme" element={<AcademicsPage3 />} />
             <Route path="/DigitalClassroom" element={<DigitalClassroom />} />
             <Route path="/AboutUs" element={<AboutUs />} />
+
+            <Route path='/' element={<Home />} />
+            <Route path='/topper' element={<Toppers/>} />
+            <Route path='/gallery' element={<Gallery/>} />
+            <Route path='/infrastructure' element={<Infrastructure/>} />
+            <Route path='/contactUs' element={<Contact/>} />
+            <Route path='/annual' element={<Annual />} />
+            <Route path='/admission' element={<Admission />} />
           </Routes>
         </Suspense>
       </AnimatePresence>

@@ -16,18 +16,19 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="navbar-content" />
         <Navbar.Collapse id="navbar-content">
           <Nav className="mx-auto fw-bold">
-            <Nav.Link as={Link} to={"https://brammaas-keaf.onrender.com/"}>HOME</Nav.Link>
-            <Nav.Link as={Link} to={"/AllCourses"}>ADMISSION</Nav.Link>
-            <NavDropdown title="ACADEMICS" as={Link} to={"/"}>
-              <NavDropdown.Item href="#" as={Link} to={"/"}>Curriculum</NavDropdown.Item>
-              <NavDropdown.Item href="#">Subjects</NavDropdown.Item>
-              <NavDropdown.Item href="#">Time Table</NavDropdown.Item>
+            <Nav.Link as={Link} to={"/"}>HOME</Nav.Link>
+            <Nav.Link as={Link} to={"/admission"}>ADMISSION</Nav.Link>
+            <NavDropdown title="ACADEMICS">
+              <NavDropdown.Item as={Link} to={"/counselling"}>Counselling</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/brammaasPrograme"}>Brammaas Programe</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/DigitalClassroom"}>Digital Classroom</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={"/AllCourses"}>All Academics</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">TOPPERS</Nav.Link>
-            <Nav.Link href="#">GALLERY</Nav.Link>
-            <Nav.Link href="#">INFRASTRUCTURE</Nav.Link>
+            <Nav.Link as={Link} to={'/topper'}>TOPPERS</Nav.Link>
+            <Nav.Link as={Link} to={"/gallery"}>GALLERY</Nav.Link>
+            <Nav.Link  as={Link} to={"/infrastructure"}>INFRASTRUCTURE</Nav.Link>
             <Nav.Link as={Link} to={"/AboutUs"}>ABOUT US</Nav.Link>
-            <Nav.Link href="#">CONTACT US</Nav.Link>
+            <Nav.Link as={Link} to={"/contactUs"}>CONTACT US</Nav.Link>
           </Nav>
           <div className="d-none d-lg-block">
             <SearchButton />

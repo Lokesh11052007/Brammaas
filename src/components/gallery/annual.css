@@ -1,0 +1,110 @@
+
+.annual {
+  background-image: url('../../assets/anual\ day.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255);
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height:369px;
+
+
+}
+
+.annual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 368px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index:1;
+  
+}
+
+.annual h1,
+.annual p{
+  position:relative;
+  z-index:1;
+  margin-top: 90px;
+  
+}
+.annual h1 {
+  font-family: poppins;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 100%;
+  padding: 0;
+font-family: 'Poppins', sans-serif;
+  
+  font-weight: bold;
+
+  
+}
+
+.annual p {
+  font-size: 22px;
+  margin-top: 0;
+  font-weight: 500;
+    
+}
+
+/* annual image*/
+.equal-box {
+  width: 100%;
+  padding-top: 100%; /* 1:1 aspect ratio */
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.container1{
+    background: linear-gradient(to bottom right, #efcbaf, #f3edeb,#f7c2ac);
+    padding:100px 100px 100px 100px ;
+}
+
+.equal-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  background: linear-gradient(to bottom right, #efcbaf, #f3edeb,#f7c2ac);
+}
+
+
+/* arrow button*/
+.arrow-btn {
+  width: 42px;
+  height: 42px;
+  
+  background-color: rgb(251, 248, 248);
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+  margin-bottom: 100px;
+}
+
+.arrow-icon {
+  font-size: 22px;
+  color: rgb(255, 153, 0);
+  font-weight: bold;
+   transition: color 0.3s ease;
+   padding-top:-7px;
+}
+
+.arrow-btn:hover {
+  background-color: orange;
+}
+
+.arrow-btn:hover .arrow-icon {
+  color: white;
+}
