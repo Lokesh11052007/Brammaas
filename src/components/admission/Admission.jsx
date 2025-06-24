@@ -1,21 +1,15 @@
-import React from 'react';
-import './admin.css';
-
 import Form from './Form.jsx';
 import Banners from'./banners.jsx';
-
-
+import adminImage from '../../assets/admin.jpg';
+import TopFixed from '../top/TopFixed.jsx';
 function Admission() {
   return (
     <>
-  
-      
-      <section className="hero">
-        <div>
-          <h1>ADMISSION ENQUIRY</h1>
-          <p>Home &gt; Admission Enquiry</p>
-        </div>
-      </section>
+      <TopFixed
+      bgImage={adminImage}
+      title={"ADMISSION ENQUIRY"}
+      content={"Admission Enquiry"}
+      />
       <Form/>
       <Banners/>
       

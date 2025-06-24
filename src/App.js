@@ -20,6 +20,7 @@ const AllCourses = lazy(() => import('./components/academic/academic2/AllCourses
 const AcademicsPage3 = lazy(() => import('./components/academic/academic3/AcademicPage3.jsx'));
 const DigitalClassroom = lazy(() => import('./components/academic/academic4/DigitalClassroom.jsx'));
 const AboutUs = lazy(() => import('./components/aboutUs/AboutUs.jsx'));
+const BoardOfDirectors = lazy(() => import('./components/BoardOfDirector/BoardOfDirector.jsx'))
 
 const Home = lazy( () => import('./components/home/Home.jsx')); 
 const Infrastructure = lazy(() => import('./components/infrastructure/Infrastructure.jsx'))
@@ -42,7 +43,8 @@ function App() {
             <Route path="/brammaasPrograme" element={<AcademicsPage3 />} />
             <Route path="/DigitalClassroom" element={<DigitalClassroom />} />
             <Route path="/AboutUs" element={<AboutUs />} />
-
+            <Route path="BoardOfDirectors" element={<BoardOfDirectors />} />
+            
             <Route path='/' element={<Home />} />
             <Route path='/topper' element={<Toppers/>} />
             <Route path='/gallery' element={<Gallery/>} />
