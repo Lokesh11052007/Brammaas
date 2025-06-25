@@ -21,7 +21,7 @@ export default function Parent({ParentTestimonial, title}) {
     ]
     return (
     <div className="container-fluid py-2" style={{backgroundColor:"#FFF3E2"}}>
-        <h3 className="fw-bold fs-1 text-center mb-5" style={{color:'#000863'}}>{title}</h3>
+        <h3 className="fw-bold  fs-1 text-center mb-1 " style={{color:'#000863'}}>{title}</h3>
       <div className="container py-5">
         <div className="row g-5 p-5 shadow-sm" style={{
         backgroundImage: `url(${ParentTestimonial})`,
