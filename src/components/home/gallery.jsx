@@ -21,11 +21,14 @@ const Gallery = () => {
   const handleViewAll = () => {
     navigate('/gallery')
   }
+  const handleAnnualDay = () => {
+    navigate('/annual')
+  }
   return (
     <div className="py-5 mt-5 mb-4 "
-     style={{
+    style={{
     background:' #FFF3E2E5'
-  }}>
+    }}>
       <h2 className="text-center fw-bold mb-4">GALLERY</h2>
       <div className="container">
         <div className="row g-4">
@@ -38,19 +41,20 @@ const Gallery = () => {
                   className="card-img-top"
                   style={{ objectFit: "cover", height: "200px" }}
                 />
-              {item.title && (
-    <div
-      className="position-absolute w-100 text-white text-center py-2"
-      style={{
-        background: 'rgba(0, 0, 0, 0.4)',
-        fontSize: '1rem',
-        fontWeight: '600',
-        bottom:0
-      }}
-    >
-      {item.title}
-  </div>
-)}
+                {item.title && (
+                  <div
+                    className="position-absolute w-100 text-white text-center py-2"
+                    style={{
+                      background: 'rgba(0, 0, 0, 0.4)',
+                      fontSize: '1rem',
+                      fontWeight: '600',
+                      bottom:0
+                    }}
+                    onClick={index === 6 ? handleAnnualDay: undefined}
+                  >
+                    {item.title}
+                  </div>
+                )}
 
               </div>
             </div>
