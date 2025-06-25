@@ -41,8 +41,8 @@ function VisionCard() {
               </div>
 
               {/* Card Content */}
-              <h5 className="mt-4 fw-bold  text-end" style={{color:"#000863"}}>{item.title}</h5>
-              <p className="fs-6 text-secondary text-end" style={{ textAlign: 'justify' }}>
+              <h5 className="mt-4 fw-bold   text-end" style={{color:"#000863"}}>{item.title}</h5>
+              <p className="fs-6 text-secondary text-start text-md-end" style={{ textAlign: 'justify' }}>
                 {item.description}
               </p>
             </Card>

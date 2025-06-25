@@ -84,9 +84,9 @@ export default function AllCourses() {
       transition={{ duration: 0.4 }}
     >
 
-      <div className="container-fluid py-5 bg-cream-90">
+      <div className="container-fluid py-5" style={{backgroundColor: '#FFF3E2E5'}}>
       <div className="container">
-        <h4 className="mb-4 course-h4" >ALL COURSES</h4>
+        <h4 className="mb-4 fw-bold fs-2 font-family" style={{color: '#000C92'}} >ALL COURSES</h4>
         <div className="row g-4 justify-content-center  px-3">
           {academic.map((item, idx) => (
             <div className="col-12 col-sm-6 col-md-4" key={idx}>
@@ -99,9 +99,11 @@ export default function AllCourses() {
                 />
                 <h5>{item.title}</h5>
                 <p className="mt-4">{item.description}</p>
-                <button className="btn btn-courses w-30" 
-                onClick={()=>navigate(item.add)}>
-                  View More <img src={next} alt="next" width="20" className="ms-2" />
+                <button className="btn text-white d-flex align-items-center mx-auto"
+                style={{ backgroundColor: '#FFA500', borderRadius: '8px' }} 
+                onClick={()=>navigate(item.add)}
+                >
+                View More <img src={next} alt="next" width="20" className="ms-2" />
                 </button>
               </div>
             </div>

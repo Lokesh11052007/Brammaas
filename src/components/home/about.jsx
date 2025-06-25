@@ -23,7 +23,7 @@ const AboutSchool = () => {
 
           {/* Text Content Section */}
           <div className="col-12 col-md-6">
-            <h2 className="fw-bold pr mb-3" style={{color:'#000863', fontSize:'70px'}}>About Our School</h2>
+            <h2 className="mb-3" style={{color:'#000863', fontSize:'60px', fontWeight: '900'}}>About Our School</h2>
             <h4 className="mb-3">
               Brammaas Vidhyalaya CBSE Senior Secondary School
             </h4>

@@ -25,10 +25,10 @@ const BoardOfDirectors = lazy(() => import('./components/BoardOfDirector/BoardOf
 const Home = lazy( () => import('./components/home/Home.jsx')); 
 const Infrastructure = lazy(() => import('./components/infrastructure/Infrastructure.jsx'))
 const Toppers = lazy(() => import('./components/toppers/Toppers.jsx'))
-const Contact = lazy(() => import('./components/contactUs/Contactus.jsx'))
-const Gallery = lazy(() => import('./components/gallery/Gallery.jsx'))
-const Annual = lazy(() => import('./components/gallery/Annual.jsx'))
-const Admission = lazy(() => import('./components/admission/Admission.jsx'))
+// const Contact = lazy(() => import('./components/contactUs/Contactus.jsx'))
+// const Gallery = lazy(() => import('./components/gallery/Gallery.jsx'))
+// const Annual = lazy(() => import('./components/gallery/Annual.jsx'))
+// const Admission = lazy(() => import('./components/admission/Admission.jsx'))
 function App() {
   return (
     <Router>
@@ -43,15 +43,15 @@ function App() {
             <Route path="/brammaasPrograme" element={<AcademicsPage3 />} />
             <Route path="/DigitalClassroom" element={<DigitalClassroom />} />
             <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="BoardOfDirectors" element={<BoardOfDirectors />} />
+            <Route path="/BoardOfDirectors" element={<BoardOfDirectors />} />
             
             <Route path='/' element={<Home />} />
             <Route path='/topper' element={<Toppers/>} />
-            <Route path='/gallery' element={<Gallery/>} />
+            {/* <Route path='/gallery' element={<Gallery/>} /> */}
             <Route path='/infrastructure' element={<Infrastructure/>} />
-            <Route path='/contactUs' element={<Contact/>} />
+            {/* <Route path='/contactUs' element={<Contact/>} />
             <Route path='/annual' element={<Annual />} />
-            <Route path='/admission' element={<Admission />} />
+            <Route path='/admission' element={<Admission />} /> */}
           </Routes>
         </Suspense>
       </AnimatePresence>

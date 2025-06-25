@@ -11,12 +11,12 @@ export default function NavBar() {
   return (
     <Navbar expand="lg" bg="white" className="shadow-sm">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#" className='ms-4'>
           <img src={logo} alt="Logo" width="80" height="80" className="d-inline-block align-top" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-content" />
         <Navbar.Collapse id="navbar-content">
-          <Nav className="mx-auto fw-bold">
+          <Nav className="mx-auto fw-bold text-center">
             <Nav.Link as={NavLink} to={"/"} end>HOME</Nav.Link>
             <Nav.Link as={NavLink} to={"/admission"}>ADMISSION</Nav.Link>
             <NavDropdown title="ACADEMICS">

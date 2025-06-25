@@ -1,8 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './HeroSection.css'; // Optional: For background styling
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+    const handleAdmission = () => {
+      navigate('/admission')
+    }
+    
   return (
     <div className="hero-section position-relative text-white">
       {/* Hero Content */}
@@ -16,7 +21,7 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="d-flex gap-3 mt-3 flex-wrap justify-content-center">
-          <button className="btn btn-warning fw-bold px-4 py-2">
+          <button className="btn btn-warning fw-bold px-4 py-2" onClick={handleAdmission}>
             Admission Open 2025–2026 <span className="ms-2">&#8594;</span>
           </button>
           <button className="btn btn-light fw-bold text-primary px-4 py-2">

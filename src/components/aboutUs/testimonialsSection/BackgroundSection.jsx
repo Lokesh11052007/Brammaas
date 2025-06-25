@@ -2,6 +2,7 @@ import React from "react";
 import bgImage from "../../../assets/aboutUsBottom.png"; // replace with your image path
 import search from '../../../assets/search.png'
 import what from '../../../assets/what.png'
+import { useNavigate } from "react-router-dom";
 export default function BackgroundSection() {
   const section = [
     {
@@ -17,6 +18,11 @@ export default function BackgroundSection() {
       field:"GET IN TOUCH"
     }
   ]
+
+  const navigate = useNavigate();
+  const handleBrowser =() =>{
+    navigate('/AllCourses')
+  } 
 
   return (
     <div className="container-fluid py-5">
@@ -38,7 +44,7 @@ export default function BackgroundSection() {
             <img src={item.img} alt="search" />
             <h2>{item.title}</h2>
             <p>{item.content}</p>
-            <button className="border-1 border-white text-white" style={{padding:'5px 25px', backgroundColor:'#FF9500'}}>{item.field}</button>
+            <button className="border-1 border-white text-white" style={{padding:'5px 25px', backgroundColor:'#FF9500'}} onClick={handleBrowser}>{item.field}</button>
           </div>
         </div>
           ))

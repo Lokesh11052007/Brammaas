@@ -7,19 +7,18 @@ function SearchButton() {
 
   return (
     <div
-      className="d-flex align-items-center justify-content-end search-wrapper"
+      className="d-flex align-items-center justify-content-end search-wrapper me-4"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      
-      <button className="search-btn">
-        <FaSearch />
-      </button>
       <input
         type="text"
         className={`form-control search-input ${hovered ? 'visible' : ''}`}
         placeholder="Search..."
       />
+      <button className="search-btn">
+        <FaSearch />
+      </button>
     </div>
   );
 }
