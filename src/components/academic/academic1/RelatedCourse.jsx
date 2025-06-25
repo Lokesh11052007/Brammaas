@@ -109,28 +109,38 @@ const RelatedCourse = () => {
         {academics.map((item, idx) => (
           <SwiperSlide key={idx}>
            
-              <div className="card  rounded-4 border-0 p-3 ms-md-5  hover-scale" style={{ width: '100%', maxWidth: '350px', backgroundColor: '#fff' }}>
-      <img
-        src={item.images}
-        alt="Course"
-        className="card-img-top rounded-3"
-        style={{ height: '250px', objectFit: 'cover' }}
-      />
+              <div
+  className="card d-flex flex-column justify-content-between rounded-4 border-0 p-3 ms-md-5 hover-scale"
+  style={{ 
+    width: '100%',
+    maxWidth: '350px',
+    minHeight: '500px', // Set a consistent height
+    backgroundColor: '#fff'
+  }}
+>
+  <img
+    src={item.images}
+    alt="Course"
+    className="card-img-top rounded-3"
+    style={{ height: '250px', objectFit: 'cover' }}
+  />
 
-      <div className="card-body">
-        <h5 className="card-title fw-bold">{item.title}</h5>
-        <p className="card-text">
-          {item.description}
-        </p>
-
-        <button className="btn text-white d-flex align-items-center mx-auto"
-         style={{ backgroundColor: '#FFA500', borderRadius: '8px' }} 
-        >
-          View More
-          <img src={next} alt="next" className="ms-2" width="20" />
-        </button>
-      </div>
+  <div className="card-body d-flex flex-column justify-content-between flex-grow-1">
+    <div>
+      <h5 className="card-title fw-bold">{item.title}</h5>
+      <p className="card-text">{item.description}</p>
     </div>
+
+    <button
+      className="btn text-white d-flex align-items-center mx-auto mt-auto"
+      style={{ backgroundColor: '#FFA500', borderRadius: '8px' }}
+    >
+      View More
+      <img src={next} alt="next" className="ms-2" width="20" />
+    </button>
+  </div>
+</div>
+
             
           </SwiperSlide>
         ))}
