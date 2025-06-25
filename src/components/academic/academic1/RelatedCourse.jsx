@@ -64,7 +64,7 @@ const RelatedCourse = () => {
 
   return (
     <div className="container-fluid position-relative mt-5 p-4" style={{backgroundColor:"#FFF3E2"}}>
-      <h2 className=" course-h4 mb-4 fw-bold ms-lg-5" >ALL RELATED COURSES</h2>
+      <h2 className=" course-h4 mb-4 fw-bold ms-lg-5" style={{color:'#000C92'}}>ALL RELATED COURSES</h2>
       <div className='container position-relative'>
         <img
   ref={prevRef}
@@ -109,7 +109,7 @@ const RelatedCourse = () => {
         {academics.map((item, idx) => (
           <SwiperSlide key={idx}>
            
-              <div className="card shadow rounded-4 border-0 p-3 ms-md-5  hover-scale" style={{ width: '100%', maxWidth: '350px', backgroundColor: '#fff' }}>
+              <div className="card  rounded-4 border-0 p-3 ms-md-5  hover-scale" style={{ width: '100%', maxWidth: '350px', backgroundColor: '#fff' }}>
       <img
         src={item.images}
         alt="Course"
