@@ -1,21 +1,19 @@
-import React from 'react';
-import './ContactUs.css';
 
-import Contactform from './contactform.jsx';
-import Contactmap from './contactmap.jsx';
-import { Link } from 'react-router-dom';
-
+import ContactForm from './contactForm.jsx';
+import ContactMap from './contactMap.jsx';
+import AboutHeader from '../aboutUs/AboutHeader.jsx';
 function ContactUs() {
   return (
     <>
-      <section className="school">
-        <div>
-          <h1>CONTACT US</h1>
-          <p><Link to={'/'} className="text-white text-decoration-none fw-semibold">Home</Link> &gt; Contact us</p>
-        </div>
-      </section>
-      <Contactform/>
-      <Contactmap/>
+      <AboutHeader 
+      bgImage={require('../../assets/bag.jpg')}
+      title={"CONTACT US"}
+      content={"Contact Us"}
+      />
+      <ContactForm />
+      <ContactMap />
+
+      
     </>
   );
 }
