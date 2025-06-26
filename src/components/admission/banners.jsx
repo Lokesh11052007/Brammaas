@@ -51,27 +51,33 @@ const Banners = () => {
   };
 
   return (
-    <div className="container-fluid px-0 position-relative" style={{ backgroundColor: '#FFF3E2' }}>
-      {/* Decorative Planes */}
-      <img src={paperplane} alt="Paper Plane Left" className="position-absolute d-none d-md-block" style={{ top: '63%', left: '-25px', width: '180px', transform: 'rotate(60deg)', zIndex: 0 }} />
-      <img src={paperplane} alt="Paper Plane Right" className="position-absolute d-none d-md-block" style={{ bottom: '5%', right: '-40px', width: '180px', transform: 'rotate(-75deg)', zIndex: 0 }} />
-      <img src={Jet} alt="Jet" className="position-absolute d-none d-md-block" style={{ top: '-10%', right: '86%', width: '250px', transform: 'rotate(-70deg)', zIndex: 1 }} />
+    <div className="container-fluid px-0 position-relative" style={{ backgroundColor: '#FFF3E2', overflowX: 'hidden' }}>
+      {/* Decorative Planes - Desktop */}
+      <img src={paperplane} alt="Paper Plane Left" className="position-absolute d-none d-md-block"
+        style={{ top: '63%', left: '-15px', width: '150px', transform: 'rotate(60deg)', zIndex: 0, maxWidth: '100%' }} />
+      <img src={paperplane} alt="Paper Plane Right" className="position-absolute d-none d-md-block"
+        style={{ bottom: '5%', right: '-25px', width: '150px', transform: 'rotate(-75deg)', zIndex: 0, maxWidth: '100%' }} />
+      <img src={Jet} alt="Jet" className="position-absolute d-none d-md-block"
+        style={{ top: '-55px', left: '-65px', width: '300px', transform: 'rotate(-70deg)', zIndex: 1, maxWidth: '100%' }} />
 
       {/* Mobile Planes */}
-      <img src={paperplane} alt="Plane Mobile Left" className="position-absolute d-md-none" style={{ top: '43%', left: '-5px', width: '100px', transform: 'rotate(60deg)', zIndex: 1 }} />
-      <img src={paperplane} alt="Plane Mobile Right" className="position-absolute d-md-none" style={{ bottom: '70px', right: '-20px', width: '100px', transform: 'rotate(-60deg)', zIndex: 1 }} />
-      <img src={Jet} alt="Jet Mobile" className="position-absolute d-md-none" style={{ top: '-30px', left: '-25px', width: '100px', transform: 'rotate(-75deg)', zIndex: 1 }} />
+      <img src={paperplane} alt="Plane Mobile Left" className="position-absolute d-md-none"
+        style={{ top: '42%', left: '-10px', width: '100px', transform: 'rotate(60deg)', zIndex: 1, maxWidth: '100%' }} />
+      <img src={paperplane} alt="Plane Mobile Right" className="position-absolute d-md-none"
+        style={{ bottom: '70px', right: '-20px', width: '100px', transform: 'rotate(-60deg)', zIndex: 1, maxWidth: '100%' }} />
+      <img src={Jet} alt="Jet Mobile" className="position-absolute d-md-none"
+        style={{ top: '-10px', left: '-20px', width: '80px', transform: 'rotate(-75deg)', zIndex: 1, maxWidth: '100%' }} />
 
       {/* Wave Heading */}
-      <div className="position-relative w-100 mb-4">
+      <div className="position-relative  w-100 mb-4">
         <img src={waveImage} alt="Wave" className="img-fluid w-100 bg-white" />
-        <h2 className="fw-bold position-absolute top-50 start-50 translate-middle text-center banner-heading"
-          style={{ fontSize: '2.5vw', color: '#000', zIndex: 2 }}>
+        <h2 className="fw-bold position-absolute mt-4 top-50 start-50 translate-middle text-center banner-heading"
+          style={{ fontSize: 'clamp(1.2rem, 5vw, 2rem)', color: '#000', zIndex: 2 }}>
           WHY CHOOSE BRAMMAAS?
         </h2>
       </div>
 
-      {/* Features */}
+      {/* Features Section */}
       <div className="container pb-5">
         <div className="row justify-content-center g-3 mt-2 mb-3 text-center">
           {features.map((item, index) => (
@@ -91,7 +97,7 @@ const Banners = () => {
                     style={{ maxHeight: '80px', objectFit: 'contain' }}
                   />
                   <p
-                    className="card-text fw-semibold"
+                    className="card-text fw-semibold text-center"
                     style={{ color: '#000863', fontSize: '0.9rem' }}
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   />
@@ -102,7 +108,7 @@ const Banners = () => {
         </div>
       </div>
 
-      {/* Inline Styles */}
+      {/* Scoped Styles */}
       <style>{`
         .transition-card {
           border: 1px solid #FFA500;
@@ -111,7 +117,6 @@ const Banners = () => {
 
         @media (max-width: 768px) {
           .banner-heading {
-            font-size: 5vw !important;
             white-space: normal !important;
             width: 90%;
             margin-top: 20px;
