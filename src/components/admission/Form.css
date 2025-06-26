@@ -1,0 +1,17 @@
+.required-star {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: red;
+  font-weight: bold;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+@media (max-width: 576px) {
+  .required-star {
+    font-size: 1rem;
+    top: 10px;
+    right: 10px;
+  }
+}
