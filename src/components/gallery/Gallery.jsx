@@ -1,9 +1,8 @@
-import React from 'react';
-import './gallery.css';
 
+import img from '../../assets/student.jpg'
 import GalleryImage from './GalleryImage.jsx';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import TopFixed from '../top/TopFixed.jsx';
 
 function Gallery() {
   return (
@@ -14,12 +13,11 @@ function Gallery() {
       transition={{ duration: 0.4 }}
     >
 
-      <section className="gallery">
-        <div>
-          <h1>GALLERY</h1>
-          <p><Link to={'/'} className="text-white text-decoration-none fw-semibold">Home</Link> &gt; Gallery</p>
-        </div>
-      </section>
+      <TopFixed 
+      bgImage={img}
+      title={"GALLERY"}
+      content={"Gallery"}
+      />
       <GalleryImage/>
  
     </motion.div>
