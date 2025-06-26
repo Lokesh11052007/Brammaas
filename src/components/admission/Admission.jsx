@@ -1,4 +1,4 @@
-import Form from './Form.jsx';
+// import Form from './Form.jsx';
 import Banners from'./banners.jsx';
 import adminImage from '../../assets/admin.jpg';
 import TopFixed from '../top/TopFixed.jsx';
@@ -16,7 +16,7 @@ function Admission() {
       title={"ADMISSION ENQUIRY"}
       content={"Admission Enquiry"}
       />
-      <Form/>
+      {/* <Form/> */}
       <Banners/>
       
     </motion.div>
