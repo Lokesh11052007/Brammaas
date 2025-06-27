@@ -1,70 +1,156 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './annual.css'; // You can still keep custom styles for extra tweaks
 
-import img1 from '../../assets/a1.jpg';
-import img2 from '../../assets/a2.jpg';
-import img3 from '../../assets/a3.jpg';
-import img4 from '../../assets/a4.jpg';
-import img5 from '../../assets/a5.jpg';
-import img6 from '../../assets/a6.jpg';
-import img7 from '../../assets/a7.jpg';
-import img8 from '../../assets/a8.jpg';
-import img9 from '../../assets/a9.jpg';
-import img10 from '../../assets/a10.jpg';
-import img11 from '../../assets/a11.jpg';
-import img12 from '../../assets/a12.jpg';
-import img13 from '../../assets/a13.jpg';
-import img14 from '../../assets/a14.jpg';
-import img15 from '../../assets/a15.jpg';
-import img16 from '../../assets/a16.jpg';
-import img17 from '../../assets/a17.jpg';
-import img18 from '../../assets/a18.jpg';
-import img19 from '../../assets/a19.jpg';
-import img20 from '../../assets/a20.jpg';
-import img21 from '../../assets/a21.jpg';
-import img22 from '../../assets/a22.jpg';
-import img23 from '../../assets/a23.jpg';
-import img24 from '../../assets/a24.jpg';
-import img25 from '../../assets/a25.jpg';
+// Dynamically import all 25 images
+const images = Array.from({ length: 25 }, (_, i) =>
+  require(`../../assets/a${i + 1}.jpg`)
+);
 
-const images = [
-  img1, img2, img3, img4, img5,
-  img6, img7, img8, img9, img10,
-  img11, img12, img13, img14, img15,
-  img16, img17, img18, img19, img20,
-  img21, img22, img23, img24, img25
-];
+const AnnualDay = () => {
+  const [messageSent, setMessageSent] = useState(false);
+  const [hoveredArrow, setHoveredArrow] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-const AnnualDay= () => {
+  const IMAGES_PER_SLIDE = 5;
+
+  useEffect(() => {
+    const resizeHandler = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', resizeHandler);
+    return () => window.removeEventListener('resize', resizeHandler);
+  }, []);
+
+  const handleArrow = (dir) => {
+    const maxSlide = Math.floor(images.length / IMAGES_PER_SLIDE);
+    setCurrentSlide((prev) =>
+      dir === 'left' ? Math.max(prev - 1, 0) : Math.min(prev + 1, maxSlide)
+    );
+  };
+
+  const renderArrow = (dir, onClick, disabled = false) => (
+    <button
+      className={`btn border shadow rounded d-flex align-items-center justify-content-center ${disabled ? 'disabled' : ''}`}
+      style={{
+        width: 42,
+        height: 42,
+        backgroundColor: hoveredArrow === dir ? 'orange' : 'white',
+        transition: '0.3s ease',
+        cursor: disabled ? 'not-allowed' : 'pointer'
+      }}
+      onMouseEnter={() => setHoveredArrow(dir)}
+      onMouseLeave={() => setHoveredArrow(null)}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      <span
+        className="fw-bold"
+        style={{ fontSize: 22, color: hoveredArrow === dir ? 'white' : 'orange' }}
+      >
+        {dir === 'left' ? '<' : '>'}
+      </span>
+    </button>
+  );
+
+  const visibleImages = isMobile
+    ? images.slice(currentSlide * IMAGES_PER_SLIDE, (currentSlide + 1) * IMAGES_PER_SLIDE)
+    : images;
+
   return (
-     <div className="container1 py-4">
-      <div className="row row-cols-5 g-3 justify-content-center">
-        {images.map((img, index) => (
-          <div key={index} className="col">
-            <div className="equal-box">
-              <img
-                src={img}
-                alt={`Annual Day ${index + 1}`}
-                className="img-fluid w-100 h-100 object-fit-cover rounded"
-            />
-            </div>
-          </div>
-        ))}
-      </div>  {/* 👈 Arrow button goes right below this */}
-
-{/* 👇 Insert the arrow button code here */}
-<div className="arrow-buttons d-flex justify-content-center gap-3 mt-4">
-  <button className="arrow-btn shadow">
-    <span className="arrow-icon">&lt;</span>
-  </button>
-  <button className="arrow-btn shadow">
-    <span className="arrow-icon">&gt;</span>
-  </button>
-        
+    <>
+      {/* 📸 Gallery Section */}
+      <section
+        className="py-5 px-3"
+        style={{ background: 'linear-gradient(to bottom right, #efcbaf, #f3edeb, #f7c2ac)' }}
+      >
+        <div className="container">
+          {isMobile ? (
+            <>
+              <div className="d-flex justify-content-center flex-wrap gap-3">
+                {visibleImages.map((img, index) => (
+                  <div key={index} className="rounded overflow-hidden" style={{ width: '30vw', aspectRatio: '1 / 1' }}>
+                    <img src={img} alt={`Annual Day ${index + 1}`} className="img-fluid rounded w-100 h-100" style={{ objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+              <div className="d-flex justify-content-center gap-3 mt-4">
+                {renderArrow('left', () => handleArrow('left'), currentSlide === 0)}
+                {renderArrow('right', () => handleArrow('right'), (currentSlide + 1) * IMAGES_PER_SLIDE >= images.length)}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3">
+                {visibleImages.map((img, index) => (
+                  <div key={index} className="col">
+                    <div className="ratio ratio-1x1 rounded overflow-hidden">
+                      <img src={img} alt={`Annual Day ${index + 1}`} className="img-fluid rounded" style={{ objectFit: 'cover' }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="d-flex justify-content-center gap-3 mt-4">
+                {renderArrow('left', () => {})}
+                {renderArrow('right', () => {})}
+              </div>
+            </>
+          )}
         </div>
+      </section>
 
-    </div>
+      {/* 📨 Contact Form */}
+      <section className="container mt-5 pt-4 mb-5">
+        <div
+          className="mx-auto p-3 border rounded bg-white"
+          style={{
+            maxWidth: 360,
+            boxShadow: '0 10px 14px -4px rgba(255,165,0,0.5)' // orange bottom box-shadow
+          }}
+        >
+          <div className="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+            <strong>GET IN TOUCH</strong>
+            <button className="btn-close btn-sm" aria-label="Close"></button>
+          </div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setMessageSent(true);
+              setTimeout(() => setMessageSent(false), 4000);
+            }}
+          >
+            <textarea
+              className="form-control mb-2"
+              rows="3"
+              placeholder="Your Enquiry..."
+              required
+              style={{
+                boxShadow: '0 4px 3px -2px rgba(255, 165, 0, 0.4)' // orange bottom shadow
+              }}
+            />
+            <input
+              type="text"
+              className="form-control mb-3"
+              placeholder="Enter mobile number / Email id"
+              required
+              style={{
+                boxShadow: '0 4px 3px -2px rgba(255, 165, 0, 0.4)' // orange bottom shadow
+              }}
+            />
+            {messageSent && (
+              <p className="text-success text-center small mb-2">
+                Thank you for contacting us. We will get back shortly
+              </p>
+            )}
+            <button
+              type="submit"
+              className="btn w-100 fw-semibold"
+              style={{ backgroundColor: '#ff9900', color: 'white' }}
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </>
   );
 };
 

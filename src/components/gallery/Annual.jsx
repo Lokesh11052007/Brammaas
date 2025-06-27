@@ -1,23 +1,14 @@
-import React from 'react';
-import './annual.css';
-
-import Annualday from './AnnualDay.jsx'; // your actual page component
-
-
-
-
+import AnnualDay from './AnnualDay.jsx';
+import TopFix from '../top/TopFixed.jsx'
+import bannerBg from "../../assets/RS_SCHOOL.jpg";
 function Annual() {
   return (
     <>
-      
-
-      <section className="annual">
-        <div>
-          <h1>ANNUAL DAY 2025</h1>
-          <p>Home &gt; Annual Day</p>
-        </div>
-      </section>
-      <Annualday/>
+    <TopFix 
+    bgImage={bannerBg}
+    title={"ANNUAL DAY"}
+    content={"Annual Day"}/>
+    <AnnualDay />
       
     </>
   );

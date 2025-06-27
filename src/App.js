@@ -25,10 +25,10 @@ const BoardOfDirectors = lazy(() => import('./components/BoardOfDirector/BoardOf
 const Home = lazy( () => import('./components/home/Home.jsx')); 
 const Infrastructure = lazy(() => import('./components/infrastructure/Infrastructure.jsx'))
 const Toppers = lazy(() => import('./components/toppers/Toppers.jsx'))
-const Contact = lazy(() => import('./components/contactUs/Contactus.jsx'))
+const Contact = lazy(() => import('./components/contactUs/ContactUs.jsx'))
 const Gallery = lazy(() => import('./components/gallery/Gallery.jsx'))
-// const Annual = lazy(() => import('./components/gallery/Annual.jsx'))
- const Admission = lazy(() => import('./components/admission/Admission.jsx'))
+const Annual = lazy(() => import('./components/gallery/Annual.jsx'))
+const Admission = lazy(() => import('./components/admission/Admission.jsx'))
 function App() {
   return (
     <Router>
@@ -50,7 +50,7 @@ function App() {
             <Route path='/gallery' element={<Gallery/>} />
             <Route path='/infrastructure' element={<Infrastructure/>} />
              <Route path='/contactUs' element={<Contact/>} />
-           {/* <Route path='/annual' element={<Annual />} />*/}
+           <Route path='/annual' element={<Annual />} />
             <Route path='/admission' element={<Admission />} /> 
           </Routes>
         </Suspense>

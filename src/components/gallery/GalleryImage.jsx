@@ -39,6 +39,7 @@ const GalleryImage = () => {
                 style={{ maxWidth: '250px', height: '220px' }}
                 onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-5px)')}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+                onClick={index === 6 ? handleAnnual : undefined}
               >
                 <img
                   src={item.img}
@@ -49,7 +50,6 @@ const GalleryImage = () => {
                 <div
                   className="position-absolute bottom-0 w-100 text-white fw-bold text-center py-2"
                   style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)' }}
-                  onClick={index === 6 ? handleAnnual : undefined}
                 >
                   {item.title}
                 </div>
